@@ -1,8 +1,9 @@
 # sass-media-query-mixin
 Sass Media Query Mixin
 
-This is a simple mixin to help using sasson responsive layouts
+This is a simple mixin to help using sass on responsive layouts
 
+``` sass
 //Example of usage
 
 .app-style {
@@ -20,3 +21,4 @@ This is a simple mixin to help using sasson responsive layouts
     min-width: 500px;
   }
 }
+```
