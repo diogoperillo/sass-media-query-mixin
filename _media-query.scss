@@ -1,0 +1,19 @@
+$media-types: (
+  retina: "(min-resolution: 192dpi), (min-device-pixel-ratio: 2)",
+  desktop: "(min-width: 1024px)",
+  tablet: "(min-width: 768px) and (max-width: 1023px)",
+  mobile: "(max-width: 766px)"
+) !default;
+
+@mixin media($types...) {
+  $result: "";
+  @each $type in $types {
+    @if $result != "" {
+      $result: $result + ",";
+    }
+    $result: $result + map-get($media-types, $type)
+  }
+  @media only screen and #{$result} {
+    @content
+  }
+}
